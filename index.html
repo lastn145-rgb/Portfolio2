@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ==================== META TAGS ==================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Today - Web Developer Portfolio. Building modern, responsive, and interactive websites with clean code and exceptional user experiences.">
+    <meta name="keywords" content="web developer, frontend developer, UI designer, JavaScript developer, portfolio">
+    <meta name="author" content="Today">
+    <title>Today | Web Developer Portfolio</title>
+
+    <!-- ==================== GOOGLE FONTS ==================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ==================== LUCIDE ICONS ==================== -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- ==================== STYLESHEET ==================== -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==================== SKIP TO CONTENT ==================== -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+        <div class="loading-content">
+            <p class="loading-name">Today</p>
+            <div class="loading-bar">
+                <div class="loading-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CURSOR GLOW (Desktop Only) ==================== -->
+    <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Today Home">Today</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i data-lucide="menu" class="hamburger-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== MOBILE MENU ==================== -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true"></div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation menu">
+            <i data-lucide="x" class="close-icon"></i>
+        </button>
+        <div class="mobile-menu-links">
+            <a href="#hero" class="mobile-menu-link active">Home</a>
+            <a href="#about" class="mobile-menu-link">About</a>
+            <a href="#skills" class="mobile-menu-link">Skills</a>
+            <a href="#projects" class="mobile-menu-link">Projects</a>
+            <a href="#services" class="mobile-menu-link">Services</a>
+            <a href="#contact" class="mobile-menu-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main id="main-content">
+
+        <!-- ==================== HERO SECTION ==================== -->
+        <section id="hero" class="hero">
+            <!-- Particle Canvas Background -->
+            <canvas id="particle-canvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+            <!-- Parallax Floating Shapes -->
+            <div class="floating-shapes" aria-hidden="true">
+                <div class="floating-shape shape-circle shape-1"></div>
+                <div class="floating-shape shape-square shape-2"></div>
+                <div class="floating-shape shape-circle shape-3"></div>
+                <div class="floating-shape shape-circle shape-4"></div>
+                <div class="floating-shape shape-square shape-5"></div>
+            </div>
+
+            <!-- Radial Glow Background -->
+            <div class="hero-radial-glow" aria-hidden="true"></div>
+
+            <div class="hero-container">
+                <!-- Left Column: Text Content -->
+                <div class="hero-left">
+                    <p class="hero-label">Hello, I'm</p>
+                    <h1 class="hero-name neon-gradient-text">Today</h1>
+                    <div class="hero-typing">
+                        <span id="typing-text"></span>
+                        <span class="typing-cursor" aria-hidden="true"></span>
+                    </div>
+                    <p class="hero-description">
+                        I build modern, responsive, and interactive websites with clean code and exceptional user experiences.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Code Card Visual -->
+                <div class="hero-right">
+                    <div class="code-card">
+                        <div class="code-card-header">
+                            <span class="code-dot dot-red"></span>
+                            <span class="code-dot dot-yellow"></span>
+                            <span class="code-dot dot-green"></span>
+                            <span class="code-filename">portfolio.js</span>
+                        </div>
+                        <div class="code-card-body">
+                            <div class="code-line">
+                                <span class="code-linenum">1</span>
+                                <span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+                            </div>
+                            <div class="code-line">
+                                <span class="code-linenum">2</span>
+                                &nbsp;&nbsp;<span class="code-property">name</span>: <span class="code-string">"Today"</span>,
+                            </div>
+                            <div class="code-line">
+                                <span class="code-linenum">3</span>
+                                &nbsp;&nbsp;<span class="code-property">role</span>: <span class="code-string">"Web Developer"</span>,
+                            </div>
+                            <div class="code-line">
+                                <span class="code-linenum">4</span>
+                                &nbsp;&nbsp;<span class="code-property">passion</span>: <span class="code-string">"Clean Code"</span>,
+                            </div>
+                            <div class="code-line">
+                                <span class="code-linenum">5</span>
+                                &nbsp;&nbsp;<span class="code-property">skills</span>: [<span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"JS"</span>],
+                            </div>
+                            <div class="code-line">
+                                <span class="code-linenum">6</span>
+                                &nbsp;&nbsp;<span class="code-property">create</span>: <span class="code-keyword">function</span>() {
+                            </div>
+                            <div class="code-line">
+                                <span class="code-linenum">7</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-string">"Amazing Websites"</span>;
+                            </div>
+                            <div class="code-line">
+                                <span class="code-linenum">8</span>
+                                &nbsp;&nbsp;}
+                            </div>
+                            <div class="code-line">
+                                <span class="code-linenum">9</span>
+                                };
+                            </div>
+                            <div class="code-line">
+                                <span class="code-linenum">10</span>
+                            </div>
+                            <div class="code-line code-comment-line">
+                                <span class="code-linenum">11</span>
+                                <span class="code-comment">// Building the future</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-linenum">12</span>
+                                <span class="code-variable">developer</span>.<span class="code-property">create</span>();
+                            </div>
+                        </div>
+                        <div class="code-card-status">
+                            <span class="status-indicator"></span>
+                            <span id="status-text">Ready!</span>
+                        </div>
+                    </div>
+
+                    <!-- Floating Tech Icons -->
+                    <div class="floating-tech-icon tech-html" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="#E44D26" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                    </div>
+                    <div class="floating-tech-icon tech-css" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="#264DE4" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                    </div>
+                    <div class="floating-tech-icon tech-js" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="24" height="24"><path fill="#F7DF1E" d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+                    </div>
+
+                    <!-- Rotating Circle Behind Card -->
+                    <div class="hero-rotating-circle" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" id="scroll-indicator">
+                <i data-lucide="mouse" class="scroll-mouse-icon"></i>
+                <span class="scroll-text">Scroll</span>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section id="about" class="about">
+            <div class="section-label-wrapper">
+                <p class="section-label">About Me</p>
+                <div class="animated-divider"></div>
+            </div>
+            <div class="about-container">
+                <!-- Left Column: Image -->
+                <div class="about-left">
+                    <div class="about-image-wrapper">
+                        <img src="images/about-dev.jpg" alt="Today - Web Developer working at a modern desk setup" class="about-image" loading="lazy">
+                        <div class="about-image-overlay"></div>
+                        <div class="about-corner-bracket" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="about-right">
+                    <h2 class="about-heading">Crafting Digital Experiences with Passion</h2>
+                    <p class="about-bio">
+                        I'm Today, a dedicated web developer with over 5 years of experience transforming ideas into elegant, functional websites. My journey in web development started with a curiosity about how things work on the internet, and it has evolved into a deep passion for creating exceptional digital experiences.
+                    </p>
+                    <p class="about-bio">
+                        I specialize in frontend development, bringing designs to life with clean, efficient code. Every project is an opportunity to push boundaries, learn something new, and deliver results that exceed expectations.
+                    </p>
+
+                    <!-- Statistics Grid -->
+                    <div class="stats-grid">
+                        <div class="stat-card glass-card">
+                            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SKILLS SECTION ==================== -->
+        <section id="skills" class="skills">
+            <div class="section-label-wrapper">
+                <p class="section-label">My Skills</p>
+                <div class="animated-divider"></div>
+            </div>
+            <h2 class="skills-heading neon-gradient-text">Technologies I Work With</h2>
+            <p class="skills-subheading">
+                I constantly stay updated with the latest technologies to deliver modern solutions.
+            </p>
+
+            <div class="skills-content">
+                <!-- Skill Bars -->
+                <div class="skill-bars">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-percent" data-target="95">0%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-percent" data-target="90">0%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent" data-target="88">0%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Responsive Design</span>
+                            <span class="skill-percent" data-target="92">0%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">UI/UX Design</span>
+                            <span class="skill-percent" data-target="85">0%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Git &amp; GitHub</span>
+                            <span class="skill-percent" data-target="87">0%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-width="87"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Circular Progress -->
+                <div class="circular-progress-container">
+                    <div class="circular-progress-item">
+                        <svg class="circular-progress" viewBox="0 0 120 120">
+                            <circle class="circle-track" cx="60" cy="60" r="54"></circle>
+                            <circle class="circle-fill" cx="60" cy="60" r="54" data-percent="90"></circle>
+                        </svg>
+                        <div class="circle-content">
+                            <span class="circle-percent" data-target="90">0%</span>
+                            <span class="circle-label">Frontend</span>
+                        </div>
+                    </div>
+                    <div class="circular-progress-item">
+                        <svg class="circular-progress" viewBox="0 0 120 120">
+                            <circle class="circle-track" cx="60" cy="60" r="54"></circle>
+                            <circle class="circle-fill" cx="60" cy="60" r="54" data-percent="85"></circle>
+                        </svg>
+                        <div class="circle-content">
+                            <span class="circle-percent" data-target="85">0%</span>
+                            <span class="circle-label">Design</span>
+                        </div>
+                    </div>
+                    <div class="circular-progress-item">
+                        <svg class="circular-progress" viewBox="0 0 120 120">
+                            <circle class="circle-track" cx="60" cy="60" r="54"></circle>
+                            <circle class="circle-fill" cx="60" cy="60" r="54" data-percent="88"></circle>
+                        </svg>
+                        <div class="circle-content">
+                            <span class="circle-percent" data-target="88">0%</span>
+                            <span class="circle-label">Logic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Grid -->
+            <div class="tech-stack">
+                <div class="tech-item glass-card">
+                    <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#E44D26" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                    <span class="tech-name">HTML5</span>
+                </div>
+                <div class="tech-item glass-card">
+                    <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#264DE4" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                    <span class="tech-name">CSS3</span>
+                </div>
+                <div class="tech-item glass-card">
+                    <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F7DF1E" d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+                    <span class="tech-name">JavaScript</span>
+                </div>
+                <div class="tech-item glass-card">
+                    <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#61DAFB" d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.167 2.167 0 0 0-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44a23.476 23.476 0 0 0-3.107-.534A23.892 23.892 0 0 0 12.769 4.7c1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442a22.73 22.73 0 0 0-3.113.538 15.02 15.02 0 0 1-.254-1.42c-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87a25.64 25.64 0 0 1-4.412.005 26.64 26.64 0 0 1-1.183-1.86c-.372-.64-.71-1.29-1.018-1.946a25.17 25.17 0 0 1 1.013-1.954c.38-.66.773-1.286 1.18-1.868A25.245 25.245 0 0 1 12 8.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933a25.952 25.952 0 0 0-1.345-2.32zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493a23.966 23.966 0 0 0-1.1-2.98c.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98a23.142 23.142 0 0 0-1.086 2.964c-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39a25.819 25.819 0 0 0 1.341-2.338zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143a22.005 22.005 0 0 1-2.006-.386c.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/></svg>
+                    <span class="tech-name">React</span>
+                </div>
+                <div class="tech-item glass-card">
+                    <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F05032" d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.652 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.678-1.342-.396-2.009L7.611 3.527 4.647 6.491c-.603.605-.603 1.585 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l6.232-6.227c.605-.603.605-1.582 0-2.187z"/></svg>
+                    <span class="tech-name">Git</span>
+                </div>
+                <div class="tech-item glass-card">
+                    <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F24E1E" d="M8.5 1.5A2.5 2.5 0 0 0 6 4v16a2.5 2.5 0 0 0 2.5 2.5h7A2.5 2.5 0 0 0 18 20V4a2.5 2.5 0 0 0-2.5-2.5h-7zM12 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm0 4.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm0 4.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+                    <span class="tech-name">Figma</span>
+                </div>
+                <div class="tech-item glass-card">
+                    <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#007ACC" d="M17.583.063a1.5 1.5 0 0 1 .583.23l3.134 1.81a1.5 1.5 0 0 1 .75 1.298v16.198a1.5 1.5 0 0 1-.75 1.298l-3.134 1.81a1.5 1.5 0 0 1-.583.23 1.5 1.5 0 0 1-.417.063 1.5 1.5 0 0 1-.417-.063l-3.134-1.81-2.583 1.49a1.5 1.5 0 0 1-2.25-1.298v-13.14L4.5 10.44V7.69L9.333 4.9 1.667.463A1.5 1.5 0 0 1 3.917-.837L12 3.84l8.083-4.677a1.5 1.5 0 0 1 1.583.063 1.5 1.5 0 0 1-.083 2.637zm-1.083 3.84v7.134l5.5-3.175V.728l-5.5 3.175zm-10.5 3.175v2.52l2.083-1.202V6.01l-2.083 1.168zm5.5 9.175v7.134l5.5 3.175v-7.134l-5.5-3.175z"/></svg>
+                    <span class="tech-name">VS Code</span>
+                </div>
+                <div class="tech-item glass-card">
+                    <svg class="tech-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#339933" d="M12.002 0C5.375 0 0 5.373 0 12.002c0 6.627 5.375 12.002 12.002 12.002 6.627 0 12.002-5.375 12.002-12.002C24.004 5.373 18.629 0 12.002 0zm4.74 17.821v-2.123l-2.184-1.25v-3.896l2.184-1.25V7.179l5.605 3.187v4.268l-5.605 3.187zm-9.48 0L1.657 14.634v-4.268l5.605-3.187v2.123l2.184 1.25v3.896l-2.184 1.25v2.123zm2.208-5.896l-2.184-1.25V7.821l2.184-1.25 2.184 1.25v3.854l-2.184 1.25z"/></svg>
+                    <span class="tech-name">Node.js</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJECTS SECTION ==================== -->
+        <section id="projects" class="projects">
+            <div class="section-label-wrapper">
+                <p class="section-label">My Projects</p>
+                <div class="animated-divider"></div>
+            </div>
+            <h2 class="projects-heading neon-gradient-text">Featured Work</h2>
+            <p class="projects-subheading">
+                A selection of projects that showcase my skills and creativity.
+            </p>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="web-apps">Web Apps</button>
+                <button class="filter-tab" data-filter="landing-pages">Landing Pages</button>
+                <button class="filter-tab" data-filter="ui-design">UI Design</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1: E-Commerce Dashboard -->
+                <div class="project-card glass-card" data-category="web-apps">
+                    <div class="project-image-wrapper">
+                        <img src="images/project-1.jpg" alt="E-Commerce Dashboard" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('Demo coming soon!');">Live Demo</a>
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('GitHub repo coming soon!');">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-Commerce Dashboard</h3>
+                        <p class="project-desc">A comprehensive admin dashboard with real-time analytics, order management, and inventory tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Portfolio Generator -->
+                <div class="project-card glass-card" data-category="web-apps">
+                    <div class="project-image-wrapper">
+                        <img src="images/project-2.jpg" alt="Portfolio Generator" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('Demo coming soon!');">Live Demo</a>
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('GitHub repo coming soon!');">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Portfolio Generator</h3>
+                        <p class="project-desc">An interactive tool that helps developers create stunning portfolios with customizable templates.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Travel Booking Site -->
+                <div class="project-card glass-card" data-category="landing-pages">
+                    <div class="project-image-wrapper">
+                        <img src="images/project-3.jpg" alt="Travel Booking Site" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('Demo coming soon!');">Live Demo</a>
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('GitHub repo coming soon!');">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Travel Booking Site</h3>
+                        <p class="project-desc">A modern travel platform featuring immersive destination showcases and seamless booking flow.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Fitness App Landing -->
+                <div class="project-card glass-card" data-category="landing-pages">
+                    <div class="project-image-wrapper">
+                        <img src="images/project-4.jpg" alt="Fitness App Landing" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('Demo coming soon!');">Live Demo</a>
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('GitHub repo coming soon!');">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Fitness App Landing</h3>
+                        <p class="project-desc">A high-converting landing page for a fitness app with engaging animations and clear CTAs.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">GSAP</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Banking App UI -->
+                <div class="project-card glass-card" data-category="ui-design">
+                    <div class="project-image-wrapper">
+                        <img src="images/project-5.jpg" alt="Banking App UI" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('Demo coming soon!');">Live Demo</a>
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('GitHub repo coming soon!');">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Banking App UI</h3>
+                        <p class="project-desc">A sleek mobile banking interface with intuitive navigation and secure transaction flows.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: SaaS Dashboard UI -->
+                <div class="project-card glass-card" data-category="ui-design">
+                    <div class="project-image-wrapper">
+                        <img src="images/project-6.jpg" alt="SaaS Dashboard UI" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('Demo coming soon!');">Live Demo</a>
+                                <a href="#" class="btn btn-ghost-sm" onclick="event.preventDefault(); alert('GitHub repo coming soon!');">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">SaaS Dashboard UI</h3>
+                        <p class="project-desc">A clean, data-dense dashboard design for a project management SaaS platform.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Design System</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SERVICES SECTION ==================== -->
+        <section id="services" class="services">
+            <div class="section-label-wrapper">
+                <p class="section-label">Services</p>
+                <div class="animated-divider"></div>
+            </div>
+            <h2 class="services-heading neon-gradient-text">What I Can Do For You</h2>
+            <p class="services-subheading">
+                From concept to deployment, I provide end-to-end web development services.
+            </p>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card glass-card">
+                    <div class="service-icon-wrapper">
+                        <i data-lucide="code-2" class="service-icon"></i>
+                    </div>
+                    <h3 class="service-title">Frontend Development</h3>
+                    <p class="service-desc">Building fast, responsive, and interactive user interfaces with modern frameworks and clean code practices.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card glass-card">
+                    <div class="service-icon-wrapper">
+                        <i data-lucide="layout" class="service-icon"></i>
+                    </div>
+                    <h3 class="service-title">Responsive Web Design</h3>
+                    <p class="service-desc">Creating websites that look and function perfectly across all devices, from mobile phones to large desktop screens.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card glass-card">
+                    <div class="service-icon-wrapper">
+                        <i data-lucide="palette" class="service-icon"></i>
+                    </div>
+                    <h3 class="service-title">Landing Page Design</h3>
+                    <p class="service-desc">Designing high-converting landing pages that capture attention and drive action with compelling visuals.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card glass-card">
+                    <div class="service-icon-wrapper">
+                        <i data-lucide="refresh-cw" class="service-icon"></i>
+                    </div>
+                    <h3 class="service-title">Website Redesign</h3>
+                    <p class="service-desc">Transforming outdated websites into modern, performant, and visually stunning digital experiences.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card glass-card">
+                    <div class="service-icon-wrapper">
+                        <i data-lucide="sparkles" class="service-icon"></i>
+                    </div>
+                    <h3 class="service-title">UI Animation</h3>
+                    <p class="service-desc">Adding purposeful animations and micro-interactions that enhance user experience and bring interfaces to life.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card glass-card">
+                    <div class="service-icon-wrapper">
+                        <i data-lucide="zap" class="service-icon"></i>
+                    </div>
+                    <h3 class="service-title">JavaScript Interactions</h3>
+                    <p class="service-desc">Implementing complex interactive features, dynamic content, and smooth client-side functionality.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TESTIMONIALS SECTION ==================== -->
+        <section id="testimonials" class="testimonials">
+            <div class="section-label-wrapper">
+                <p class="section-label">Testimonials</p>
+                <div class="animated-divider"></div>
+            </div>
+            <h2 class="testimonials-heading neon-gradient-text">What Clients Say</h2>
+            <p class="testimonials-subheading">
+                Feedback from people I've had the pleasure of working with.
+            </p>
+
+            <div class="testimonials-slider-wrapper">
+                <button class="slider-arrow slider-prev" aria-label="Previous testimonial">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+
+                <div class="testimonials-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card glass-card active">
+                        <i data-lucide="quote" class="testimonial-quote-icon"></i>
+                        <p class="testimonial-text">"Today delivered an exceptional website that exceeded all our expectations. The attention to detail, smooth animations, and clean code structure made working together a fantastic experience. Our conversion rate increased by 40% after the redesign."</p>
+                        <div class="testimonial-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/avatar-1.jpg" alt="Sarah Mitchell" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-author-info">
+                                <p class="testimonial-name">Sarah Mitchell</p>
+                                <p class="testimonial-position">CEO, TechStart Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card glass-card">
+                        <i data-lucide="quote" class="testimonial-quote-icon"></i>
+                        <p class="testimonial-text">"Working with Today was seamless from start to finish. The ability to translate complex requirements into an elegant, user-friendly interface is truly remarkable. Highly recommend for any serious web project."</p>
+                        <div class="testimonial-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/avatar-2.jpg" alt="Marcus Chen" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-author-info">
+                                <p class="testimonial-name">Marcus Chen</p>
+                                <p class="testimonial-position">Product Manager, InnovateLabs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card glass-card">
+                        <i data-lucide="quote" class="testimonial-quote-icon"></i>
+                        <p class="testimonial-text">"The level of craftsmanship in Today's work is outstanding. Every animation, every transition, every pixel feels intentional. Our portfolio site has received countless compliments from clients and peers alike."</p>
+                        <div class="testimonial-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/avatar-3.jpg" alt="Emily Rodriguez" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-author-info">
+                                <p class="testimonial-name">Emily Rodriguez</p>
+                                <p class="testimonial-position">Founder, DesignCraft Studio</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card glass-card">
+                        <i data-lucide="quote" class="testimonial-quote-icon"></i>
+                        <p class="testimonial-text">"Today brought both technical expertise and creative vision to our dashboard project. The performance optimizations and responsive design ensured our application works flawlessly across all devices."</p>
+                        <div class="testimonial-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/avatar-4.jpg" alt="David Kim" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-author-info">
+                                <p class="testimonial-name">David Kim</p>
+                                <p class="testimonial-position">CTO, CloudScale Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card glass-card">
+                        <i data-lucide="quote" class="testimonial-quote-icon"></i>
+                        <p class="testimonial-text">"Exceptional work ethics and incredible talent. Today transformed our outdated website into a modern, high-performing platform that perfectly represents our brand. The project was delivered on time and within budget."</p>
+                        <div class="testimonial-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/avatar-5.jpg" alt="Lisa Thompson" class="testimonial-avatar" loading="lazy">
+                            <div class="testimonial-author-info">
+                                <p class="testimonial-name">Lisa Thompson</p>
+                                <p class="testimonial-position">Marketing Director, BrandVault</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-arrow slider-next" aria-label="Next testimonial">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <button class="slider-dot active" data-index="0" aria-label="Testimonial 1"></button>
+                <button class="slider-dot" data-index="1" aria-label="Testimonial 2"></button>
+                <button class="slider-dot" data-index="2" aria-label="Testimonial 3"></button>
+                <button class="slider-dot" data-index="3" aria-label="Testimonial 4"></button>
+                <button class="slider-dot" data-index="4" aria-label="Testimonial 5"></button>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT SECTION ==================== -->
+        <section id="contact" class="contact">
+            <div class="section-label-wrapper">
+                <p class="section-label">Get in Touch</p>
+                <div class="animated-divider"></div>
+            </div>
+            <h2 class="contact-heading neon-gradient-text">Let's Work Together</h2>
+            <p class="contact-subheading">
+                Have a project in mind? I'd love to hear about it. Send me a message and let's create something amazing.
+            </p>
+
+            <div class="contact-container">
+                <!-- Left Column: Contact Info -->
+                <div class="contact-left">
+                    <div class="contact-item">
+                        <div class="contact-icon-wrapper">
+                            <i data-lucide="mail" class="contact-icon"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p class="contact-label">Email</p>
+                            <p class="contact-value">hello@today.dev</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-wrapper">
+                            <i data-lucide="map-pin" class="contact-icon"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p class="contact-label">Location</p>
+                            <p class="contact-value">San Francisco, CA</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-wrapper">
+                            <i data-lucide="phone" class="contact-icon"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p class="contact-label">Phone</p>
+                            <p class="contact-value">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="contact-socials">
+                        <a href="#" class="social-link" aria-label="GitHub" onclick="event.preventDefault(); alert('Coming soon!');">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn" onclick="event.preventDefault(); alert('Coming soon!');">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter" onclick="event.preventDefault(); alert('Coming soon!');">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Dribbble" onclick="event.preventDefault(); alert('Coming soon!');">
+                            <i data-lucide="dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="contact-right">
+                    <form class="contact-form glass-card" id="contact-form" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                            <label for="name" class="form-label">Your Name</label>
+                            <span class="form-error" id="name-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                            <label for="email" class="form-label">Your Email</label>
+                            <span class="form-error" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" class="form-input" placeholder=" " required>
+                            <label for="subject" class="form-label">Subject</label>
+                            <span class="form-error" id="subject-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-input form-textarea" placeholder=" " required></textarea>
+                            <label for="message" class="form-label">Your Message</label>
+                            <span class="form-error" id="message-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <i data-lucide="send" class="btn-icon"></i>
+                        </button>
+
+                        <div class="form-success" id="form-success">
+                            <i data-lucide="check-circle"></i>
+                            <span>Message sent successfully!</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <!-- Column 1: Brand -->
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">Today</a>
+                    <p class="footer-tagline">Building digital experiences with passion and precision.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" aria-label="GitHub" onclick="event.preventDefault(); alert('Coming soon!');">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn" onclick="event.preventDefault(); alert('Coming soon!');">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Twitter" onclick="event.preventDefault(); alert('Coming soon!');">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Dribbble" onclick="event.preventDefault(); alert('Coming soon!');">
+                            <i data-lucide="dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <a href="#hero" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#skills" class="footer-link">Skills</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Services</h4>
+                    <a href="#services" class="footer-link">Frontend Development</a>
+                    <a href="#services" class="footer-link">Responsive Design</a>
+                    <a href="#services" class="footer-link">UI Animation</a>
+                    <a href="#services" class="footer-link">Website Redesign</a>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="footer-contact-col">
+                    <h4 class="footer-col-title">Get in Touch</h4>
+                    <p class="footer-contact-item">
+                        <i data-lucide="mail"></i>
+                        hello@today.dev
+                    </p>
+                    <p class="footer-contact-item">
+                        <i data-lucide="map-pin"></i>
+                        San Francisco, CA
+                    </p>
+                    <p class="footer-contact-item">
+                        <i data-lucide="phone"></i>
+                        +1 (555) 123-4567
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; <span id="footer-year"></span> Today. All rights reserved.</p>
+                <p class="footer-credit">Designed &amp; Built with passion</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script src="script.js"></script>
+</body>
+</html>
